@@ -24,7 +24,11 @@ public class Task1 {
 
 
     }
-
+   static class MyComparator implements Comparator<Student>{
+        public int compare(Student s1,Student s2) {
+            return Integer.compare(s1.roll, s2.roll);
+        }
+   }
     public static void main(String[] args) {
         ArrayList<Student> list = new ArrayList<>();
         list.add(new Student("Shubham",1,20,98));
@@ -38,5 +42,12 @@ public class Task1 {
         {
             System.out.println(s);
         }
+        Collections.sort(list,new MyComparator());
+        System.out.println("After comparable");
+        for(Student s : list)
+        {
+            System.out.println(s);
+        }
+
     }
 }
