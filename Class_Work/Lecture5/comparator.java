@@ -1,5 +1,7 @@
 package Class_Work.Lecture5;
 import java.util.*;
+import java.util.function.Predicate;
+
 public class comparator {
     public static void main(String[] args) {
         ArrayList<Integer> list = new ArrayList<>();
@@ -13,5 +15,6 @@ public class comparator {
         System.out.println(list);
         list.sort((a,b) -> b-a);
         System.out.println(list);
+
     }
 }
