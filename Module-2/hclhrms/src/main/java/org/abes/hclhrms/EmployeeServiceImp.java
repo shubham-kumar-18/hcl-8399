@@ -12,7 +12,7 @@ public class EmployeeServiceImp {
 
     @Autowired
     private EmpRepoImp emprepo;
-
+    Employee emp2= new Employee(101,"Shubham","Engineer","Developer","sstm@gmail.com");
     public String addEmp(){
         Employee emp1 = new Employee(101,"Shubham","Engineer","Developer","sstm@gmail.com");
         return emprepo.addemp(emp1);
@@ -26,6 +26,16 @@ public class EmployeeServiceImp {
         return emprepo.getEmpById(101);
     }
 
+   public String addEmpBulk() {
+        return emprepo.addEmpbulk();
+   }
+   public String deleteById(){
+        return emprepo.deleteById(101);
+   }
 
+
+    public String updateById() {
+        return emprepo.updateById(101,emp2);
+    }
 
 }

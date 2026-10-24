@@ -14,4 +14,6 @@ public interface EmployeeRepo {
     String deleteById(int emp_id);
     String updateById(int emp_id,Employee updateEmp);
     List<Employee> getemp();
+
+    String addEmpbulk();
 }
