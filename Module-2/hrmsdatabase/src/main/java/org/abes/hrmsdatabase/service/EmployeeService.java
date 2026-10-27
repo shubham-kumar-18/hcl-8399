@@ -11,9 +11,9 @@ public class EmployeeService {
     @Autowired
     private EmployeeRepository employeeRepository;
 
-    public String createnewEmployee() {
-        Employee emp1 = new Employee(101l, "Shubham", "Java Fsd", "Developer");
-        employeeRepository.save(emp1);
+    public String createnewEmployee(Employee newEmp) {
+//        Employee emp1 = new Employee(101l, "Shubham", "Java Fsd", "Developer","hsgbh","123");
+        employeeRepository.save(newEmp);
         return "Employee Created Successfully";
     }
 
@@ -30,7 +30,7 @@ public class EmployeeService {
     public String updateEmployee(@PathVariable long emp_id) {
         Employee emp = employeeRepository.findById(emp_id).orElse(null);
         if(emp != null) {
-            Employee emp2 = new Employee(emp_id, "Sameer", "Java Fsd", "Developer");
+            Employee emp2 = new Employee(emp_id, "Sameer", "Java Fsd", "Developer","shjk","123");
 
             employeeRepository.save(emp2);
         }
