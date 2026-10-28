@@ -1,11 +1,2 @@
-import React from 'react'
-
-function Home() {
-  return (
-    <div>
-     <h2>HElllo guys good morning</h2> 
-    </div>
-  )
-}
-
-export default Home
+import { Link } from 'react-router-dom'
+export default function Home(){return <main className="auth-page"><div className="auth-brand"><span className="brand-mark">H</span><span>People<span className="brand-accent">First</span></span></div><section className="auth-card home-card"><div className="eyebrow">HUMAN RESOURCES · MADE SIMPLE</div><h1>Your workday,<br/><span>well taken care of.</span></h1><p>Manage your attendance and keep your workday in view with one simple dashboard.</p><div className="home-actions"><Link className="button button-primary" to="/login">Log in <span>→</span></Link><Link className="button button-secondary" to="/registration">Create an account</Link></div><div className="auth-footnote">Secure employee attendance management</div></section></main>}

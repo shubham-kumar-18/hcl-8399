@@ -1,28 +1,4 @@
-import React from 'react'
-import 'bootstrap/dist/css/bootstrap.min.css';
-
-function Login() {
-  return (
-    <div>
-        <form>
-  <div class="form-group">
-    <label for="exampleInputEmail1">Email address</label>
-    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email"/>
-    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-  </div>
-  <div class="form-group">
-    <label for="exampleInputPassword1">Password</label>
-    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password"/>
-  </div>
-  <div class="form-check">
-    <input type="checkbox" class="form-check-input" id="exampleCheck1"  />
-    <label class="form-check-label" for="exampleCheck1">Check me out</label>
-  </div>
-  <button type="submit" class="btn btn-primary">Submit</button>
-</form>
-      
-    </div>
-  )
-}
-
-export default Login
+import { useState } from 'react'
+import { Link, useNavigate } from 'react-router-dom'
+const API='http://localhost:8080/v1/user'
+export default function Login(){const[empId,setEmpId]=useState('');const[password,setPassword]=useState('');const[error,setError]=useState('');const[busy,setBusy]=useState(false);const navigate=useNavigate();async function submit(e){e.preventDefault();setBusy(true);setError('');try{const response=await fetch(`${API}/login`,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({emp_id:Number(empId),empPassword:password})});const message=await response.text();if(!response.ok||!message.toLowerCase().includes('successful'))throw new Error(message||'Login failed');const employeeResponse=await fetch(`${API}/addid/${empId}`);if(!employeeResponse.ok)throw new Error('Could not load your employee profile');const employee=await employeeResponse.json();localStorage.setItem('hrmsUser',JSON.stringify(employee));navigate('/dashboard')}catch(err){setError(err.message==='Failed to fetch'?'Could not reach the backend. Start Spring Boot and try again.':err.message)}finally{setBusy(false)}}return <main className="auth-page"><div className="auth-brand"><span className="brand-mark">H</span><span>People<span className="brand-accent">First</span></span></div><section className="auth-card"><div className="eyebrow">WELCOME BACK</div><h1>Log in to your account</h1><p>Enter your employee details to continue.</p><form className="auth-form" onSubmit={submit}>{error&&<div className="auth-error" role="alert">{error}</div>}<label>Employee ID<input type="number" value={empId} onChange={e=>setEmpId(e.target.value)} placeholder="e.g. 104" required/></label><label>Password<input type="password" value={password} onChange={e=>setPassword(e.target.value)} placeholder="Your password" required/></label><button className="button button-primary" disabled={busy}>{busy?'Logging in…':'Log in'}</button></form><div className="auth-link">New here? <Link to="/registration">Create an account</Link></div></section></main>}

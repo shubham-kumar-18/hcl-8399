@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.*;
 import java.sql.SQLOutput;
 
 @RestController
-@CrossOrigin("http://localhost:5173/")
+@CrossOrigin(origins = "http://localhost:5173")
 @RequestMapping("/v1/user")
 public class EmployeeController {
     @Autowired
@@ -44,4 +44,16 @@ public class EmployeeController {
     }
 
 
+
+   @PostMapping("/login")
+   public String login(@RequestBody Employee employee) {
+       return employeeService.verification(
+               employee.getEmp_id(),
+               employee.getEmpPassword()
+       );
+   }
+
+
+
 }
+
