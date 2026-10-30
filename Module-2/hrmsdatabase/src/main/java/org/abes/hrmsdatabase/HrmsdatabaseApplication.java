@@ -10,6 +10,7 @@ public class HrmsdatabaseApplication {
 
         SpringApplication.run(HrmsdatabaseApplication.class, args);
         System.out.println("heyy...... buddy great work");
+
     }
 
 }
