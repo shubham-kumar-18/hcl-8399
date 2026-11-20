@@ -5,10 +5,7 @@ import org.abes.selflearning.Model.Alien;
 import org.abes.selflearning.Services.AlienService;
 import org.abes.selflearning.repository.AlienRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -23,6 +20,7 @@ public class AlienController {
     public AlienController(AlienRepository alienRepository) {
         this.alienRepository = alienRepository;
     }
+
 
 
     @PostMapping("/alien")
@@ -64,8 +62,15 @@ public class AlienController {
         return alienService.findAlienById(id);
     }
 
-
-
+    @GetMapping("/")
+    public String welcome(){
+        return "Welcome";
+    }
+    @DeleteMapping("/deleteid/{id}")
+    public String deleteAlien(@PathVariable int id){
+        alienService.deleteAlienById(id);
+        return "Successfully deleted Alien";
+    }
 
 
 }

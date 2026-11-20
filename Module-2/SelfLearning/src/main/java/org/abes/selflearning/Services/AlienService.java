@@ -17,5 +17,9 @@ public class AlienService {
     public Alien findAlienById(int id){
         return alienRepository.findById(id).orElse(null);
     }
+    public String deleteAlienById(int id){
+        alienRepository.deleteById(id);
+        return "Successfully deleted Alien";
+    }
 
 }

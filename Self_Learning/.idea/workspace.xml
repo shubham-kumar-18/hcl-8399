@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="f69e2279-944a-4fb7-9930-74bedb4baca3" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../JwtDemo/backend/src/main/java/com/hcld2/jwtdemo/controller/AuthController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JwtDemo/backend/src/main/java/com/hcld2/jwtdemo/controller/PostController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JwtDemo/backend/src/main/java/com/hcld2/jwtdemo/dto/AuthRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JwtDemo/backend/src/main/java/com/hcld2/jwtdemo/dto/AuthResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JwtDemo/backend/src/main/java/com/hcld2/jwtdemo/entity/Post.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JwtDemo/backend/src/main/java/com/hcld2/jwtdemo/entity/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JwtDemo/backend/src/main/java/com/hcld2/jwtdemo/repository/PostRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JwtDemo/backend/src/main/java/com/hcld2/jwtdemo/repository/UserRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JwtDemo/backend/src/main/java/com/hcld2/jwtdemo/security/JwtAuthFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JwtDemo/backend/src/main/java/com/hcld2/jwtdemo/service/JwtService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Module-2/Alien/.gitattributes" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Module-2/Alien/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Module-2/Alien/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Module-2/Alien/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Module-2/Alien/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Module-2/Alien/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Module-2/Alien/src/main/java/org/abes/alien/AlienApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Module-2/Alien/src/main/java/org/abes/alien/Controller/AlienController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Module-2/Alien/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Module-2/Alien/src/test/java/org/abes/alien/AlienApplicationTests.java" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 3
+}]]></component>
+  <component name="ProjectId" id="3LYZhuf5VxNPG0vD2cZ4T5PnXqE" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/shubh/IdeaProjects/HCL TRAINING/src/Self_Learning"
+  }
+}]]></component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-30f59d01ecdd-cffe25b9f5b3-intellij.indexing.shared.core-IU-253.28294.334" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f69e2279-944a-4fb7-9930-74bedb4baca3" name="Changes" comment="" />
+      <created>1793633086493</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1793633086493</updated>
+    </task>
+    <servers />
+  </component>
+</project>
